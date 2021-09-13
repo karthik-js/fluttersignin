@@ -10,6 +10,9 @@ Future<void> _handleSignIn() async {
     GoogleSignInAccount? account = await _googleSignIn.signIn();
     if (account != null) {
       print(account);
+      account.authentication.then((value) => {
+            print({value.accessToken, value.serverAuthCode})
+          });
     }
   } catch (error) {
     print(error);

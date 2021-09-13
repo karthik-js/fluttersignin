@@ -16,3 +16,7 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 [https://www.youtube.com/watch?v=Q00Foa8CiDk](flutter signin inspired from)
+
+https://github.com/flutter/flutter/issues/57712
+
+https://www.youtube.com/watch?v=qnoBwlHklq0
