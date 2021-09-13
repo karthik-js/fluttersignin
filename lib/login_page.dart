@@ -6,16 +6,16 @@ GoogleSignIn _googleSignIn = GoogleSignIn(
 );
 
 Future<void> _handleSignIn() async {
-  try {
-    GoogleSignInAccount? account = await _googleSignIn.signIn();
-    if (account != null) {
-      print(account);
-      account.authentication.then((value) => {
-            print({value.accessToken, value.serverAuthCode})
-          });
-    }
-  } catch (error) {
-    print(error);
+// Trigger the authentication flow
+  final GoogleSignInAccount googleUser = await _googleSignIn.signIn();
+
+  if (googleUser != null) {
+    // Obtain the auth details from the request
+    final GoogleSignInAuthentication googleAuth =
+        await googleUser.authentication;
+    print(googleUser);
+    print(googleAuth.serverAuthCode);
+
   }
 }
 
